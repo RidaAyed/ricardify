@@ -90,6 +90,7 @@ while True:
                 all_text.remove("Neu eingestellt")
                 emoji += "🆕"
 
+            date = all_text[1]
             bids = all_text[2]
             price = all_text[3]
 
@@ -106,7 +107,7 @@ while True:
                 buy_now = all_text[4] + ": " + all_text[5]
 
             # Create dict for first advertisement
-            new_dict = {"id": unique_id, "name" : title, "url" : url, "bids": bids, "price": price, "buy_now": buy_now}
+            new_dict = {"id": unique_id, "name" : title, "url" : url, "date" : date ,"bids": bids, "price": price, "buy_now": buy_now}
 
             # Check if file exists already and create if not
             fname = args.query.lower() + "_dictionary.json"
