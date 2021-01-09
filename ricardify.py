@@ -64,7 +64,7 @@ while True:
         html = urlopen(search_url)
         soup = BeautifulSoup(html, features="lxml")
 
-        list_all = soup.body.find_all('a', attrs={"class":"link--2OHFZ"})
+        list_all = soup.body.find_all('a', attrs={"class": "link--2etfD"})
 
         n_new = 0
         sys.stdout.write("\r {} new listings".format(n_new))
